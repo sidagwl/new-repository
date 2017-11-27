@@ -416,12 +416,12 @@ Ship = function () {
       this.children.exhaust.visible = false;
     }
 
-    if (this.delayBeforeBullet > 0) {
-      this.delayBeforeBullet = 10;  
+    if (this.delayBeforeBullet > 0) { 
       this.delayBeforeBullet -= delta;
     }
     if (KEY_STATUS.space) {
       if (this.delayBeforeBullet <= 0) {
+		  this.delayBeforeBullet = 10;
         for (var i = 0; i < this.bullets.length; i++) {
           if (!this.bullets[i].visible) {
             SFX.laser();
